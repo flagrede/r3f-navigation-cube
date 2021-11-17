@@ -4,7 +4,7 @@ Experiment to use a 3D cube as navigation pattern.
 
 ## Controls
 - Mouse: cube edges are clickable
-- Keyboard: focus then arrowkeys
+- Keyboard: focus cube with tab key then use arrow keys
 - Mobile: swipe
 
 Demo: https://pedantic-einstein-1278db.netlify.app/
