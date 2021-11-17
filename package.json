@@ -1,0 +1,40 @@
+{
+  "name": "cube-navigation",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@react-spring/core": "9.3.0",
+    "@react-spring/three": "9.3.0",
+    "@react-spring/web": "9.3.0",
+    "@react-three/a11y": "2.2.3",
+    "@react-three/drei": "7.20.3",
+    "@react-three/fiber": "7.0.18",
+    "@use-gesture/react": "10.1.4",
+    "leva": "0.9.14",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-lorem-ipsum": "1.4.9",
+    "react-placeholder": "4.1.0",
+    "react-scripts": "5.0.0-next.37+25f516f8",
+    "suspend-react": "0.0.8",
+    "three": "0.133.1",
+    "twind": "0.16.16",
+    "use-sound": "4.0.1",
+    "valtio": "1.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
