@@ -9,7 +9,7 @@ const Text = ({ text, opacity, background }) => {
         'absolute',
         css`
           transform: translate3d(-50%, 0, 0);
-          top: 100px;
+          top: 50px;
         `
       )}
       style={{ opacity }}>
@@ -20,7 +20,7 @@ const Text = ({ text, opacity, background }) => {
             will-change: transform;
           `)
         }
-        style={{ transform: opacity.to((t) => `translate3d(0,${-50 + (1 - t) * (1 * 40)}px,0)`) }}>
+        style={{ transform: opacity.to((t) => `translate3d(0,${(1 - t) * (1 * 40)}px,0)`) }}>
         <div>{text}</div>
         <a.div
           className={tw(

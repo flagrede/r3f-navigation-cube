@@ -31,8 +31,8 @@ const App = () => {
   const subActiveFaceIndex = subCube.activeFaceIndex
   const SelectedModel = textFaceMapping[mainActiveFaceIndex].model
   const canvasContainerRef = useRef()
-  const [navigationSound] = useSound(navigationSfx)
-  const [clickSound] = useSound(clickSfx)
+  const [navigationSound] = useSound(navigationSfx, { volume: 0.7 })
+  const [clickSound] = useSound(clickSfx, { volume: 0.7 })
   const groupRef = useRef()
 
   // Animated text color
@@ -96,14 +96,8 @@ const App = () => {
         className={tw`pointer-events-none fixed top-0 left-0 w-full h-full flex justify-center items-center text-center`}
         style={{ ...textColorSpring }}>
         <h1 className={tw`whitespace-pre text-6xl md:text-8xl font-bold tracking-tight`}>
-          {transitionText((style, location) => (
-            <Text
-              open={true}
-              t={style.t}
-              opacity={style.opacity}
-              background={textColorSpring.background}
-              text={textFaceMapping[mainActiveFaceIndex]?.text}
-            />
+          {transitionText((style) => (
+            <Text opacity={style.opacity} background={textColorSpring.background} text={textFaceMapping[mainActiveFaceIndex]?.text} />
           ))}
         </h1>
         <SubText mainActiveFaceIndex={mainActiveFaceIndex} subActiveFaceIndex={subActiveFaceIndex} isSubmenu={isSubMenu} />

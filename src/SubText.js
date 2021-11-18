@@ -9,6 +9,9 @@ const SubText = ({ mainActiveFaceIndex, subActiveFaceIndex, isSubmenu }) => {
         'absolute tracking-tight',
         css`
           top: 120px;
+          @screen md {
+            top: 160px;
+          }
         `
       )}
       style={{ color: textFaceMapping[mainActiveFaceIndex].colors.paragraph }}>
