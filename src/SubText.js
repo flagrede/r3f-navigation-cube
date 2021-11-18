@@ -8,7 +8,7 @@ const SubText = ({ mainActiveFaceIndex, subActiveFaceIndex, isSubmenu }) => {
       className={tw(
         'absolute tracking-tight',
         css`
-          top: 190px;
+          top: 120px;
         `
       )}
       style={{ color: textFaceMapping[mainActiveFaceIndex].colors.paragraph }}>
