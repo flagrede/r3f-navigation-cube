@@ -19,7 +19,7 @@ const CUBE_Y = 1.2
 const LERP_STEP = 0.1
 
 const Cube = ({ cubeState, isFaceChangingRef }) => {
-  const { isSubMenu } = useSnapshot(state)
+  const { isSubMenu, navigationSound } = useSnapshot(state)
   const { swapY, swapX, rotationAxis, activeFaceIndex, parentCubeFaceIndex } = cubeState
   const { viewport } = useThree()
   const { factor } = viewport
@@ -38,6 +38,7 @@ const Cube = ({ cubeState, isFaceChangingRef }) => {
   const cubeRef = useRef()
   const hoverCubeRef = useRef()
   const edgeButtonsRef = useRef()
+  const isFirstLoadRef = useRef(true)
   const raycastRef = useRef(new THREE.Raycaster())
   const hoverColor =
     parentCubeFaceIndex !== null
@@ -118,6 +119,14 @@ const Cube = ({ cubeState, isFaceChangingRef }) => {
     },
     { transform: ([x, y]) => [x / factor, y / factor], eventOptions: { passive: false } }
   )
+
+  useEffect(() => {
+    if (!isFirstLoadRef.current) {
+      navigationSound()
+    } else {
+      isFirstLoadRef.current = false
+    }
+  }, [swapY, swapX])
 
   return (
     <group scale={[2, 2, 2]} position={[0, CUBE_Y, 0]}>

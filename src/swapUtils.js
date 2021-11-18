@@ -8,7 +8,6 @@ export const swapOnY = ({ direction }) => {
     state.mainCube.swapY += direction
     state.mainCube.rotationAxis = [0, direction, 0]
   }
-  state.navigationSound()
 }
 
 export const swapOnX = ({ direction }) => {
@@ -19,5 +18,4 @@ export const swapOnX = ({ direction }) => {
     state.mainCube.swapX += direction
     state.mainCube.rotationAxis = [direction, 0, 0]
   }
-  state.navigationSound()
 }
